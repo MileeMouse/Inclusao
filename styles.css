@@ -1,0 +1,378 @@
+/* Configurações gerais */
+body {
+    font-family: 'Times New Roman', Times, serif;
+    padding: 0;
+    background-color: #F5F5F5; /* Cinza suave */
+    color: #4A4A48; /* Texto principal */
+    scroll-behavior: smooth; /* Efeito suave ao rolar */
+}
+
+/* Cabeçalho */
+header {
+    background-color: #2C6B3F; /* Verde primário */
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    border-bottom: 5px solid #C7F9B7; /* Verde escuro para destaque */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+header nav ul li {
+    display: inline;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+header nav ul li a:hover {
+    color: #A5D6A7; /* Verde claro */
+    text-decoration: underline;
+}
+
+/* Configurações gerais das seções */
+section {
+    padding: 20px;
+    margin: 15px auto;
+    max-width: 800px;
+    background: #FFF8E1; /* Bege complementar */
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo específico para a seção "Sobre a Página" */
+#sobre-pagina {
+    text-align: center; /* Centraliza o conteúdo */
+    background: #F4F1E1; /* Verde primário */
+    color: #4F7942; /* Texto em branco */
+    padding: 30px; /* Maior espaçamento para destaque */
+    border: 3px solid #F4F1E1; /* Borda verde escuro */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra mais forte */
+}
+
+#sobre-pagina h2 {
+    font-size: 2rem; /* Título maior */
+    margin-bottom: 10px;
+}
+
+#sobre-pagina p {
+    font-size: 1.2rem; /* Texto um pouco maior */
+    line-height: 1.8; /* Melhor espaçamento entre linhas */
+}
+
+/* Estilo específico para a seção de notícias */
+#noticias-exclusao {
+    text-align: center; /* Centraliza o título */
+    padding: 20px;
+    background-color: #F4F1E1;
+    border: 3px solid #F4F1E1; /* Borda verde escuro */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra mais forte */
+}
+
+#noticias-exclusao h2 {
+    margin-bottom: 20px; /* Espaçamento entre o título e os quadrados */
+    color: #4F7942; /* Verde escuro */
+}
+
+.noticias-container {
+    display: flex;
+    justify-content: center; /* Centraliza os quadrados no container */
+    flex-wrap: wrap; /* Permite quebra de linha em telas menores */
+    gap: 15px; /* Espaçamento entre os quadrados */
+}
+
+.noticia-card {
+    flex: 1;
+    max-width: 18%; /* Cada card ocupa 18% do espaço total */
+    aspect-ratio: 1; /* Mantém formato quadrado */
+    background: #A8E38D; /* Bege complementar */
+    border-radius: 10px; /* Arredondamento das bordas */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra para destaque */
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s, box-shadow 0.3s; /* Efeitos de hover */
+}
+
+.noticia-card a {
+    text-decoration: none;
+    font-size: 1rem;
+    color: #4F7942; /* Verde primário */
+    font-weight: bold;
+}
+
+.noticia-card:hover {
+    transform: translateY(-5px); /* Eleva o card ao passar o mouse */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra mais forte */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .noticia-card {
+        max-width: 45%; /* Dois por linha em telas menores */
+    }
+}
+
+@media (max-width: 480px) {
+    .noticia-card {
+        max-width: 100%; /* Um por linha em telas muito pequenas */
+    }
+}
+
+/* Estilo para a seção "Tipos de Exclusão" */
+#tipos-exclusao {
+    display: flex; /* Utiliza Flexbox para posicionar as divs lado a lado */
+    flex-wrap: wrap; /* Permite que as divs "quebrem" para a linha seguinte quando não houver mais espaço */
+    justify-content: center; /* Centraliza as divs dentro da seção */
+    padding: 40px 20px;
+    background-color: #F4F1E1;
+    border: 3px solid #F4F1E1; /* Borda verde escuro */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra mais forte */
+}
+
+#h1tipo{
+    text-align: center;
+    color: #2C6B3F;
+    padding: 60px;
+}
+
+.tipo-exclusao {
+    background-color: #A8E38D; /* Fundo claro */
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Sombra para destaque */
+    padding: 20px;
+    margin: 10px;
+    width: 250px; /* Define uma largura fixa para os quadrados */
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    max-width: 100%; /* Garante que a largura não ultrapasse o limite */
+}
+
+.tipo-exclusao:hover {
+    transform: translateY(-5px); /* Efeito de elevação ao passar o mouse */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Sombra mais forte ao passar o mouse */
+}
+
+.tipo-exclusao h3 {
+    font-size: 1.3rem;
+    color: #4F7942; /* Verde escuro */
+    margin-bottom: 10px;
+}
+
+.tipo-exclusao p {
+    font-size: 1rem;
+    color: #2C6B3F; /* Verde mais escuro para o texto */
+    line-height: 1.6;
+}
+
+.tipo-exclusao .descricao {
+    display: none; /* Descrição oculta por padrão */
+    font-size: 0.9rem;
+    color: #4A4A48; /* Verde primário */
+    margin-top: 10px;
+}
+
+.tipo-exclusao:hover .descricao {
+    display: block; /* Mostra a descrição ao passar o mouse */
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+    #tipos-exclusao {
+        flex-direction: column; /* Alinha as divs em uma coluna em telas menores */
+    }
+}
+
+/* Estilo para a seção de "Consentização" */
+#consentizacao {
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    height: 100vh; /* Preenche a tela inteira */
+    text-align: center;
+    padding: 20px;
+    background: #F5F5DC; /* Verde claro de fundo */
+    color: #4F7942; /* Verde escuro para o texto */
+    flex-direction: column; /* Organiza o conteúdo de cima para baixo */
+    border: 3px solid #F4F1E1; /* Borda verde escuro */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra mais forte */
+}
+
+
+#consentizacao h2 {
+    font-size: 2.5rem; /* Tamanho grande para o título */
+    margin-bottom: 20px;
+    color: #4F7942; /* Verde mais escuro para o título */
+}
+
+#consentizacao p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    max-width: 800px; /* Limita a largura do parágrafo */
+    margin: 0 auto; /* Centraliza o parágrafo */
+    color: #2E7D32; /* Texto em verde escuro */
+}
+
+#consentizacao .destaque {
+    font-weight: bold; /* Destaque para palavras-chave */
+    color: #4CAF50; /* Verde primário */
+    font-size: 1.3rem; /* Maior destaque */
+    margin-top: 15px; /* Separação do texto principal */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    #consentizacao h2 {
+        font-size: 2rem; /* Ajuste do tamanho do título em telas menores */
+    }
+
+    #consentizacao p {
+        font-size: 1rem; /* Ajuste do texto para telas menores */
+    }
+}
+
+/* Estilo para a seção "Como Ajudar" */
+#como-ajudar {
+    background: #A8E38D; /* Cor de fundo clara */
+    padding: 40px 20px;
+    text-align: center;
+}
+
+#como-ajudar h2 {
+    font-size: 2rem; /* Tamanho grande para o título */
+    color: #388E3C; /* Verde escuro */
+    margin-bottom: 30px;
+}
+
+.maneira-ajudar {
+    background: #FFF8E1; /* Fundo de cada div de ajuda */
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Sombra para destaque */
+    padding: 20px;
+    margin-bottom: 20px; /* Espaçamento entre as divs */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.maneira-ajudar:hover {
+    transform: translateY(-5px); /* Efeito de elevar ao passar o mouse */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Efeito de sombra mais forte */
+}
+
+.maneira-ajudar h3 {
+    font-size: 1.5rem; /* Título de cada maneira */
+    color: #2E7D32; /* Verde escuro */
+    margin-bottom: 15px;
+}
+
+.maneira-ajudar p {
+    font-size: 1rem;
+    color: #4CAF50; /* Verde primário */
+    line-height: 1.6;
+    max-width: 600px;
+    margin: 0 auto; /* Centraliza o texto */
+}
+
+.maneira-ajudar img {
+    width: 50px; /* Tamanho do ícone ou imagem */
+    height: 50px;
+    margin-bottom: 10px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .maneira-ajudar {
+        flex-direction: row; /* Exibe as divs lado a lado em telas grandes */
+        justify-content: flex-start;
+        gap: 20px;
+    }
+
+    .maneira-ajudar h3 {
+        font-size: 1.2rem;
+    }
+
+    .maneira-ajudar p {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .maneira-ajudar {
+        flex-direction: column; /* Exibe as divs empilhadas em telas menores */
+    }
+}
+
+/* Estilo para a seção "Ações de Proteção" */
+#acoes-protecao {
+    background: #F5F5DC; /* Verde claro */
+    padding: 40px 20px;
+    text-align: center;
+    display: flex;
+    justify-content: center; /* Centraliza o conteúdo */
+    align-items: center; /* Centraliza verticalmente */
+    flex-direction: column; /* Organiza os elementos de cima para baixo */
+    border-radius: 10px;
+    border: 3px solid #F4F1E1; /* Borda verde escuro */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra mais forte */
+}
+
+#acoes-protecao h2 {
+    font-size: 2rem; /* Tamanho grande para o título */
+    color: #388E3C; /* Verde escuro */
+    margin-bottom: 20px;
+}
+
+#acoes-protecao p {
+    font-size: 1.2rem;
+    color: #2E7D32;
+    margin-bottom: 30px;
+    max-width: 600px; /* Limita a largura do texto */
+    margin: 20px;
+}
+
+#acoes-protecao .botao {
+    background: #4CAF50; /* Verde primário */
+    color: white;
+    font-size: 1.1rem;
+    padding: 15px 30px;
+    border-radius: 5px;
+    text-decoration: none; /* Remove o sublinhado */
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+#acoes-protecao .botao:hover {
+    background-color: #388E3C; /* Cor mais escura ao passar o mouse */
+    transform: scale(1.1); /* Efeito de ampliação */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    #acoes-protecao h2 {
+        font-size: 1.8rem; /* Ajuste do título em telas menores */
+    }
+
+    #acoes-protecao p {
+        font-size: 1rem; /* Ajuste do texto para telas menores */
+    }
+}
+
+
+
